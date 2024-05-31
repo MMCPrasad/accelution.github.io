@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Accelution</title>
+    <link rel="icon" href="assets/webLogo.png" type="images/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Mate+SC&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/waves.css">
+    <style>
+        .footer-bg-image {
+            background-image: url('assets/background.png');
+            background-size: cover;
+            /* Adjust as needed */
+            background-position: center;
+            /* Adjust as needed */
+        }
+
+        #sec-carousel .carousel-inner .carousel-item img {
+            max-height: 500px;
+            width: 100%;
+            margin: auto;
+        }
+
+        /* CSS to fix the position of the iframe to the top */
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: none;
+            z-index: 9999;
+            height: 15%;
+        }
+
+        /* CSS for padding content below the fixed navbar */
+        body {
+            padding-top: 10rem;
+            /* Adjust this value to match the height of your navbar */
+        }
+
+
+        /* Default styles */
+        .shape1 {
+            position: relative;
+            width: 100%;
+            /* Adjusted for responsiveness */
+            max-width: 250px;
+            /* Maximum width for larger screens */
+            height: 450px;
+            /* Default height */
+            overflow: hidden;
+            border-radius: 49% 50% 50% 50% / 30% 29% 29% 27%;
+            /* Border radius for shape1 */
+            background-color: #35155D;
+        }
+
+        .shape1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: -1;
+            border-radius: 20px;
+            /* Common border radius for the pseudo-element */
+        }
+
+        .shape1 img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .shape3 {
+            position: relative;
+            width: 100%;
+            /* Adjusted for responsiveness */
+            max-width: 500px;
+            /* Maximum width for larger screens */
+            height: 500px;
+            /* Default height */
+            overflow: hidden;
+            border-radius: 44% 54% 50% 50% / 48% 0% 48% 47%;
+            /* Border radius for shape1 */
+            background-color: #35155D;
+        }
+
+        .shape3::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: -1;
+            border-radius: 20px;
+            /* Common border radius for the pseudo-element */
+        }
+
+        .shape3 img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .shape2 {
+            position: relative;
+            width: 100%;
+            /* Adjusted for responsiveness */
+            max-width: 225px;
+            /* Maximum width for larger screens */
+            height: 225px;
+            /* Default height */
+            overflow: hidden;
+            border-radius: 44% 54% 50% 50% / 48% 0% 48% 47%;
+            /* Border radius for shape2 */
+            background-color: #35155D;
+        }
+
+        .shape2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: -1;
+            border-radius: 20px;
+            /* Common border radius for the pseudo-element */
+        }
+
+        .shape2 img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Media queries */
+        @media (max-width: 1380px) {
+            .shape1 {
+                max-width: 180px;
+                height: 350px;
+            }
+
+            .shape2 {
+                max-width: 200px;
+                height: 200px;
+            }
+
+            .shape3 {
+                max-width: 400px;
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 1248px) {
+            .shape1 {
+                max-width: 150px;
+                height: 250px;
+            }
+
+            .shape2 {
+                max-width: 175px;
+                height: 175px;
+            }
+
+            .shape2 {
+                max-width: 350px;
+                height: 350px;
+            }
+
+        }
+
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+
+        .fade-in.active {
+            opacity: 1;
+        }
+
+        @media (max-width: 1380px) {
+            #sec-1 .col {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #sec-1 .col {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #sec-1 .col {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+
+        @media (max-width: 1169px) {
+            #sec-1 .col:last-child {
+                display: none;
+            }
+        }
+
+        .shape1,
+        .shape2,
+        .shape3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Zoom out effect */
+        .shape1 img,
+        .shape2 img,
+        .shape3 img {
+            width: 100%;
+            /* Adjust the percentage to control the zoom level */
+            height: auto;
+            /* Maintain aspect ratio */
+            transition: transform 0.3s ease;
+            /* Smooth zoom transition */
+        }
+
+        .shape1 img:hover,
+        .shape2 img:hover,
+        .shape3 img:hover {
+            transform: scale(1.1);
+            /* Optional: Slight zoom-in effect on hover */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            /* Initial state is transparent */
+            animation: fadeIn 3s forwards;
+            /* 2s for the duration of the fade-in effect */
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-down {
+            opacity: 0;
+            /* Initial state is transparent */
+            transform: translateY(-40px);
+            transition: opacity 2s, transform 2s;
+            /* Matches the duration of the animation */
+        }
+
+        .fade-down.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes moveUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .move-up {
+            opacity: 0;
+            /* Initial state is transparent */
+            transform: translateY(40px);
+            transition: opacity 2s, transform 2s;
+            /* Matches the duration of the animation */
+        }
+
+        .move-up.visible {
+            animation: moveUp 2s forwards;
+            /* 1s for the duration of the move-up effect */
+        }
+
+        #serviceDiv {
+
+            /* Keeps the div hidden initially */
+            opacity: 0;
+            /* Initially invisible */
+            transform: translateY(-20px);
+            /* Initially moved up */
+            transition: opacity 1s, transform 1s;
+            /* Transition for animation */
+        }
+
+        #serviceDiv.show {
+            display: flex;
+            /* Shows the div */
+            opacity: 1;
+            /* Fades in */
+            transform: translateY(0);
+            /* Moves to the original position */
+        }
+
+        .cards-container {
+            display: flex;
+            /* Use flexbox to align the cards in a row */
+            flex-wrap: nowrap;
+            /* Prevent the cards from wrapping to the next line */
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem;
+        }
+
+        .cards-img-top {
+            width: 100%;
+            height: 200px;
+            /* Adjust this value as needed */
+            object-fit: cover;
+        }
+
+        .card-body {
+            text-align: center;
+            /* Optional: To center-align the text */
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cards {
+                width: 100%;
+                /* Full width on smaller screens */
+            }
+        }
+
+        /* Default styles for cards */
+        .cards-container {
+            display: flex;
+            /* justify-content: center; */
+            margin-top: 3rem;
+        }
+
+        .cards {
+            width: 18rem;
+            margin: 1rem;
+            /* Add some margin between cards */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Add transition for smooth animation */
+            border-radius: 20px;
+        }
+
+        .card-img-top {
+            height: 10rem;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            /* Adjust font size for card title */
+        }
+
+        .card-text {
+            padding: 2rem;
+        }
+
+        /* Styles for hover effect */
+        .cards:hover {
+            transform: translateY(-5px);
+            /* Move card up slightly on hover */
+            box-shadow: 0 0 30px rgba(74, 118, 187, 0.8);
+            /* Add box shadow on hover */
+            border-radius: 20px;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .cards {
+                width: calc(50% - 2rem);
+                /* Adjust card width for smaller screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-img-top {
+                height: 8rem;
+                /* Reduce image height for smaller screens */
+            }
+
+            .card-body {
+                padding: 0.5rem;
+                /* Reduce padding for card body */
+            }
+
+            .card-title {
+                font-size: 1rem;
+                /* Adjust font size for smaller screens */
+            }
+
+            .card-text {
+                padding: 1rem;
+                /* Adjust padding for smaller screens */
+            }
+        }
+
+        h4 {
+            font-family: "Josefin Sans", sans-serif;
+        }
+
+        p {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .coin-flip {
+            display: inline-block;
+            animation: flip 10s infinite ease-in-out;
+            /* height: 50%;
+  margin-left: 135px;
+  width: 235px;
+  margin-top: -11px; */
+        }
+
+        @keyframes flip {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+
+            50% {
+                transform: perspective(1000px) rotateY(180deg);
+            }
+
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/nodesGif.gif');
+            background-size: fill;
+            background-position: center;
+            opacity: 0.8;
+            /* Adjust the opacity value as needed */
+            z-index: 0;
+        }
+
+        .position-relative {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe src="nav.html" frameborder="0" scrolling="no"></iframe>
+
+
+
+
+    <div class="header" style="margin-top: -3.2rem;">
+
+        <!--Content before waves-->
+        <div class="inner-header flex">
+            <!--Just the logo.. Don't mind this-->
+            <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+                <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+                <g>
+                </g>
+            </svg>
+            <section id="sec-carousel" style="padding: 0;">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <img src="assets/avation.png" alt="aviation" style="width: 25%;">
+                            </div>
+                            <div class="row">
+                                <h1 style="font-family: 'Merriweather', serif;color: rgb(255, 255, 255);">Aviation
+                                    Consultancy</h1>
+                                <h5 style="font-family: 'Quicksand', sans-serif;padding: 1rem;color: white;">"
+                                    Relentlessly pursuing excellence to
+                                    strengthen aviation systems,<br>
+                                    mitigate risks, and unlock the full potential of your aviation business. "</h5>
+
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <img src="assets/IT.png" alt="aviation" style="width: 25%;">
+                            </div>
+                            <div class="row">
+                                <h1 style="font-family: 'Merriweather', serif;color: white;">IT and Business
+                                    Consultancy
+                                </h1>
+                                <h5 style="font-family: 'Quicksand', sans-serif;padding: 1rem;color: white;">
+                                    "Dedicated to
+                                    providing competitive business
+                                    solutions to empower your business strategies<br> through exceptional professional
+                                    expertise,<br> providing quality services with continuous engagements."</h5>
+
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <img src="assets/post.png" alt="aviation" style="width: 15%;">
+                            </div>
+                            <div class="row">
+                                <h1 style="font-family: 'Merriweather', serif;color: white;">Digital Transformation
+                                </h1>
+                                <h5 style="font-family: 'Quicksand', sans-serif;padding: 1rem;color: white;">" Bring
+                                    innovative and bespoke IT solutions that exceed customer<br>
+                                    expectations while upholding the values of trust, inspiration,<br> and on-time
+                                    delivery
+                                    through
+                                    transformative technologies that inspire growth and drive success. "</h5>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <img src="assets/banking.png" alt="aviation" style="width: 16%;">
+                            </div>
+                            <div class="row">
+                                <h1 style="font-family: 'Merriweather', serif;color: white;">T24 Core Banking
+                                    Consultancy
+                                </h1>
+                                <h5 style="font-family: 'Quicksand', sans-serif;padding: 1rem;color: white">" Support
+                                    Digital Transformation of T24 Core Banking Systems to meet customer expectations. "
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section><br><br><br>
+        </div>
+
+        <!--Waves Container-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
+
+    </div>
+
+
+   
+    <section id="sec-2" style="padding-left: 8rem; padding-right: 1rem;">
+        <div class="row">
+            <div class="col" style="text-align: right;">
+                <img src="assets/about_us_1.png" alt="Your Image" style="width: 50%;">
+
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light btn-lg" disabled
+                    style="font-family: 'Roboto Slab', serif;">Services</button>
+                <div class="para">
+                    
+                    <div class="text" style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem;">
+                        <br> We specialise in attracting, developing, and<br> managing outstanding personnel to collaborate<br>
+                        with you effortlessly. We can form a team<br> with the specific talents you require.
+                    </div><br>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cards-container" style=" margin-top: 3rem;">
+            <div class="cards" style="width: 18rem;">
+                <div class="row" style="height: 10rem;">
+                    <img class="card-img-top" src="assets/aviation_icon.png" alt="Card image cap"
+                        style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="row" style="height: 20rem;">
+                    <div class="card-body" style="padding: 1rem;">
+                        <h4 class="card-title">Aviation Consultancy</h4>
+                        <p class="card-text" style="padding: 2rem;">For expert aviation guidance, trust our consultants.
+                            We offer tailored advice, industry insights, and IT solutions for aviation
+                            professionals and enthusiasts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards" style="width: 18rem;">
+                <div class="row" style="height: 10rem;">
+                    <img class="card-img-top" src="assets/bank_icon.png" alt="Card image cap"
+                        style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="row" style="height: 20rem;">
+                    <div class="card-body" style="padding: 1rem;">
+                        <h4 class="card-title">T24 Core Banking Consultancy</h4>
+                        <p class="card-text" style="padding: 2rem;">Support Digital Transformation of T24 Core Banking
+                            Systems
+                            to meet customer expectations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards" style="width: 18rem;">
+                <div class="row" style="height: 10rem;">
+                    <img class="card-img-top" src="assets/digital_icon.png" alt="Card image cap"
+                        style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="row" style="height: 20rem;">
+                    <div class="card-body" style="padding: 1rem;">
+                        <h4 class="card-title">Digital Transformation</h4>
+                        <p class="card-text" style="padding: 2rem;">We excel in innovative IT solutions for efficiency,
+                            security, and digital
+                            impact. Services include HR, Risk Management,
+                            Custom Solutions, and IT Services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards" style="width: 18rem;">
+                <div class="row" style="height: 10rem;">
+                    <img class="card-img-top" src="assets/business_icon.png" alt="Card image cap"
+                        style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="row" style="height: 20rem;">
+                    <div class="card-body" style="padding: 1rem;">
+                        <h4 class="card-title">IT and Business Consultancy</h4>
+                        <p class="card-text" style="padding: 2rem;">We analyze and improve business strategy,
+                            operations,
+                            tech, change management, and coaching skills.
+                            Our expertise extends to IT, business consultancy, and process automation.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <br><br><br><br><br>
+
+    <section id="sec-3" style="padding-left: 8rem; padding-right: 1rem;">
+        <div class="row" id="aboutUs">
+            <div class="col">
+                <button type="button" class="btn btn-light btn-lg" disabled
+                    style="font-family: 'Roboto Slab', serif;">About Us</button>
+                <div class="para">
+                    <span class="span" style="font-size: 3rem; font-family: 'Alegreya Sans SC', sans-serif;">
+                        <strong class="bold-text-2" style="color: #DC3545;">Bringing </strong>
+                        <strong class="bold-text-2">consumer </strong><br>
+                        <strong class="bold-text-2">experiences to new heights.</strong>
+                    </span>
+                    <div class="text" style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem;">
+                        Our strategy is to consistently create forward-thinking, innovative products and solutions that
+                        anticipate industry trends, solve complex challenges, and propel our customers to the forefront
+                        of technological advancement by acting as a bridge, fostering meaningful connections between
+                        people, businesses, and technologies. Through cutting-edge technology and forward-thinking
+                        tactics, we hope to inspire a new generation of thinkers, innovators, and leaders who will
+                        transform Sri Lanka's IT environment.
+                    </div><br>
+                </div>
+            </div>
+            <div class="col">
+                <img src="assets/about_us_2.png" style="width: 85%;">
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer">
+        <section class="p-4 position-relative" style="color: white;">
+            <div class="background-overlay"></div>
+            <div class="container text-center text-md-start mt-5 position-relative" style="z-index: 1;">
+                <div class="row mt-2">
+                    <img src="assets/webLogo.png" alt="Logo" class="coin-flip"
+                        style="height: 50%; width: 155px; margin-top: -11px;">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="assets/orginalLogo2 (1).png" alt="Logo"
+                                style="height: 41px; width: 235px; margin-top: -11px;">
+                        </h6>
+                        <p style="color: white;">
+                            Join us on this exciting journey as we accelerate your business growth and soar to new
+                            heights together!
+                        </p>
+                        <div class="d-flex pt-2" style="margin-bottom: 10px;">
+                            <a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social rounded-circle me-2"
+                                href="https://facebook.com/accelution"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social rounded-circle me-2" href=""><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social rounded-circle me-2"
+                                href="https://www.linkedin.com/company/accelutionlk/about/?viewAsMember=true"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 footerGap text-left">
+                        <h5 style="padding-bottom: 10px;">Accelution (Private) Limited</h5>
+                        <p style="color: white"><i class="fa fa-map-marker-alt me-3"></i> 178/6 S B Mawatha, Mahara
+                            Kadawatha, Sri Lanka</p>
+                        <p style="color: white"><i class="fa fa-phone-alt me-3"></i> +94 112 901 672</p>
+                        <p style="color: white"><i class="fa fa-mobile me-3"></i> +94 766 387 160</p>
+                        <p style="color: white"><i class="fa fa-envelope me-3"></i> info@accelution.lk</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 footerGap text-start">
+                        <h5 style="padding-bottom: 10px;">Accelution Services Inc.</h5>
+                        <p style="color: white"><i class="fa fa-map-marker-alt me-3"></i> 8423 111B Street, Delta, BC,
+                            Canada</p>
+                        <p style="color: white"><i class="fa fa-phone-alt me-3"></i> +1 604 398 3187</p>
+                        <p style="color: white"><i class="fa fa-mobile me-3"></i> +1 604 315 7479</p>
+                        <p style="color: white"><i class="fa fa-envelope me-3"></i> info@accelution.ca</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: #76668a; color: white;">
+            <a class="text-reset fw-bold" href="" style="text-decoration: none;">© 2024 Accelution (Private) Limited,
+                All Rights Reserved.</a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('message', function (event) {
+            if (event.origin === window.location.origin) {
+                const sectionId = event.data;
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            setTimeout(function () {
+                var elements = document.querySelectorAll('.fade-in');
+
+                function fadeInSequentially(elements, index) {
+                    if (index >= elements.length) return;
+                    elements[index].classList.add('active');
+                    setTimeout(function () {
+                        fadeInSequentially(elements, index + 1);
+                    }, 300); // Adjust the delay between fade-ins
+                }
+
+                fadeInSequentially(elements, 0);
+            }, 5000); // Adjust the delay before starting the animation (in milliseconds)
+        });
+
+        
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, { threshold: 0.1 }); // Adjust the threshold as needed
+
+            const section = document.getElementById('sec-2');
+            section.classList.add('fade-down'); // Add initial fade-down class
+            observer.observe(section);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, { threshold: 0.1 }); // Adjust the threshold as needed
+
+            const section = document.getElementById('sec-3');
+            section.classList.add('move-up'); // Add initial move-up class
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>
