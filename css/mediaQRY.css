@@ -1,0 +1,179 @@
+/* Section 2 styling */
+#sec-2 {
+    padding-left: 8rem;
+    padding-right: 1rem;
+}
+
+#sec-2 .col img {
+    width: 100%;
+    height: auto;
+}
+
+#sec-2 .btn {
+    font-family: 'Roboto Slab', serif;
+}
+
+#sec-2 .para .text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Cards styling */
+.cards-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards {
+    width: 18rem;
+    margin-bottom: 2rem;
+}
+
+.cards .card-img-top {
+    height: 10rem;
+    object-fit: cover;
+}
+
+.cards .card-body {
+    padding: 1rem;
+}
+
+/* Responsive styles */
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    #sec-2 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #sec-2 .col:first-child {
+        display: none;
+    }
+
+    #sec-2 .col {
+        width: 100%;
+        text-align: center;
+    }
+
+    #sec-2 .col img {
+        width: 80%;
+        margin: auto;
+    }
+
+    #sec-2 .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #sec-2 .para .text {
+        font-size: 1rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 768px) {
+    #sec-2 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #sec-2 .col {
+        width: 100%;
+        text-align: center;
+    }
+
+    #sec-2 .col img {
+        width: 80%;
+        margin: auto;
+    }
+
+    #sec-2 .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #sec-2 .para .text {
+        font-size: 1.1rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+    #sec-2 {
+        padding-left: 4rem;
+        padding-right: 2rem;
+    }
+
+    #sec-2 .col {
+        text-align: left;
+    }
+
+    #sec-2 .btn {
+        width: auto;
+    }
+
+    #sec-2 .para .text {
+        font-size: 1.2rem;
+    }
+
+    .cards-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cards {
+        width: 18rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    #sec-2 {
+        padding-left: 8rem;
+        padding-right: 4rem;
+    }
+
+    #sec-2 .col {
+        text-align: left;
+    }
+
+    #sec-2 .btn {
+        width: auto;
+    }
+
+    #sec-2 .para .text {
+        font-size: 1.2rem;
+    }
+
+    .cards-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cards {
+        width: 18rem;
+    }
+}
