@@ -212,7 +212,7 @@
     }
 
     .carousel-item img {
-        max-width: 150px; /* Adjust max-width for smaller screens */
+        max-width: 250px; /* Adjust max-width for smaller screens */
     }
 }
 
@@ -242,7 +242,7 @@
     }
 
     .carousel-item img {
-        max-width: 250px; /* Adjust max-width for larger tablets */
+        max-width: 350px; /* Adjust max-width for larger tablets */
     }
 }
 
@@ -257,6 +257,6 @@
     }
 
     .carousel-item img {
-        max-width: 300px; /* Default max-width for larger screens */
+        max-width: 400px; /* Default max-width for larger screens */
     }
 }
