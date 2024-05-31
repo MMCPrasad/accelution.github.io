@@ -57,6 +57,59 @@
                 transform: perspective(1000px) rotateY(360deg);
             }
         }
+        /* Styles for mobile phones */
+@media (max-width: 576px) {
+    .navbar-brand {
+        margin-left: 0.5rem; /* Adjust spacing for the logo */
+    }
+
+    .navbar-nav {
+        margin-top: 1rem; /* Add margin to separate links from the brand */
+    }
+
+    .nav-item {
+        margin-right: 0.5rem; /* Adjust spacing between nav items */
+    }
+
+    .coin-flip {
+        display: none; /* Hide the coin-flip image on mobile phones */
+    }
+
+    .navbar-collapse {
+        padding-right: 0; /* Remove padding on the right side */
+    }
+}
+
+/* Styles for tablets */
+@media (min-width: 576px) and (max-width: 992px) {
+    .navbar-brand {
+        margin-left: 1rem; /* Adjust spacing for the logo */
+    }
+
+    .nav-item {
+        margin-right: 1rem; /* Adjust spacing between nav items */
+    }
+}
+
+/* Styles for desktops */
+@media (min-width: 992px) {
+    .navbar-brand {
+        margin-left: 7rem; /* Restore original margin for the logo */
+    }
+
+    .navbar-nav {
+        margin-right: 10rem; /* Adjust spacing for the right side */
+    }
+
+    .nav-item {
+        margin-right: 2rem; /* Adjust spacing between nav items */
+    }
+
+    .coin-flip {
+        margin-left: 2rem; /* Adjust spacing for the coin-flip image */
+    }
+}
+
     </style>
 </head>
 
