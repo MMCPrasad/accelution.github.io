@@ -266,7 +266,7 @@
 @media (max-width: 576px) {
     .cards-container .row {
         justify-content: center;
-        margin-left: 1.2rem;
+        /* margin-bottom: 1.2rem; */
     }
 }
 
@@ -285,42 +285,22 @@
 }
 
 
-/* Styles for mobile phones */
-@media (max-width: 576px) {
-    #sec-3 {
-        padding: 1rem 1rem; /* Padding for top and bottom: 1rem, left and right: 1rem */
-    }
-    #sec-3 .row {
-        flex-direction: column;
-        align-items: center;
-    }
-    #sec-3 .col {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-    #sec-3 img {
-        width: 100%;
-        max-width: 300px; /* Adjust maximum width as needed */
-        height: auto;
+@media (max-width: 768px) { /* For tablets and below */
+    .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
     }
 }
 
-/* Styles for tablets */
-@media (min-width: 577px) and (max-width: 992px) {
-    #sec-3 {
-        padding: 2rem 2rem; /* Padding for top and bottom: 2rem, left and right: 2rem */
-    }
-    #sec-3 .col {
-        width: 50%;
+@media (min-width: 768px) { /* For desktops */
+    .col {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
 
-/* Styles for laptops and desktops */
-@media (min-width: 993px) {
-    #sec-3 {
-        padding: 3rem 4rem; /* Padding for top: 3rem, bottom: 3rem, left and right: 4rem */
-    }
-    #sec-3 .col {
-        width: 50%;
-    }
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
