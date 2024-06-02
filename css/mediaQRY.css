@@ -43,9 +43,7 @@
 @media (max-width: 600px) {
     
 
-    #sec-2 .col:first-child {
-        display: none;
-    }
+    
 
     #sec-2 .col {
         width: 100%;
@@ -285,16 +283,19 @@
 }
 
 
-@media (max-width: 768px) { /* For tablets and below */
-    .col {
-        flex: 0 0 100%;
-        max-width: 100%;
-        text-align: center;
-    }
+
+#sec-3 {
+    padding: 40px; /* Adding padding to sec-3 section */
+}
+
+#sec-3 .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px; /* Adding padding to columns within sec-3 */
 }
 
 @media (min-width: 768px) { /* For desktops */
-    .col {
+    #sec-3 .col {
         flex: 0 0 50%;
         max-width: 50%;
     }
