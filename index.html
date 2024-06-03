@@ -65,6 +65,7 @@
         body {
             padding-top: 10rem;
             /* Adjust this value to match the height of your navbar */
+            overflow-x: hidden;
         }
 
 
@@ -440,7 +441,7 @@
             border-radius: 20px;
         }
 
-        
+
 
         @media (max-width: 576px) {
             .card-img-top {
@@ -512,6 +513,13 @@
         .position-relative {
             position: relative;
         }
+
+        .hr-with-padding {
+    border: 0;
+    border-bottom: 2px solid #000000;
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the HR line */
+}
     </style>
 </head>
 
@@ -537,25 +545,25 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
-                                <img src="assets/avation.png" alt="aviation" >
+                                <img src="assets/avation.png" alt="aviation">
                             </div>
                             <div class="row">
                                 <h1 style="font-family: 'Merriweather', serif;color: rgb(255, 255, 255);">Aviation
                                     Consultancy</h1>
-                                    <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
-                                        <h5 style="font-family: 'Quicksand', sans-serif;color: white;">"
-                                            Relentlessly pursuing excellence to
-                                            strengthen aviation systems,
-                                            mitigate risks, and unlock the full potential of your aviation business. "</h5>
-                                    </div>
-                                
+                                <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
+                                    <h5 style="font-family: 'Quicksand', sans-serif;color: white;">"
+                                        Relentlessly pursuing excellence to
+                                        strengthen aviation systems,
+                                        mitigate risks, and unlock the full potential of your aviation business. "</h5>
+                                </div>
+
 
                             </div>
 
                         </div>
                         <div class="carousel-item">
                             <div class="row">
-                                <img src="assets/IT.png" alt="aviation" >
+                                <img src="assets/IT.png" alt="aviation">
                             </div>
                             <div class="row">
                                 <h1 style="font-family: 'Merriweather', serif;color: white;">IT and Business
@@ -568,14 +576,14 @@
                                         solutions to empower your business strategies through exceptional professional
                                         expertise, providing quality services with continuous engagements."</h5>
                                 </div>
-                                
+
 
                             </div>
 
                         </div>
                         <div class="carousel-item">
                             <div class="row">
-                                <img src="assets/post.png" alt="aviation" >
+                                <img src="assets/post.png" alt="aviation">
                             </div>
                             <div class="row">
                                 <h1 style="font-family: 'Merriweather', serif;color: white;">Digital Transformation
@@ -588,24 +596,26 @@
                                         through
                                         transformative technologies that inspire growth and drive success. "</h5>
                                 </div>
-                                
+
 
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="row">
-                                <img src="assets/banking.png" alt="aviation" >
+                                <img src="assets/banking.png" alt="aviation">
                             </div>
                             <div class="row">
                                 <h1 style="font-family: 'Merriweather', serif;color: white;">T24 Core Banking
                                     Consultancy
                                 </h1>
                                 <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
-                                    <h5 style="font-family: 'Quicksand', sans-serif;padding: 1rem;color: white">" Support
-                                        Digital Transformation of T24 Core Banking Systems to meet customer expectations. "
+                                    <h5 style="font-family: 'Quicksand', sans-serif;padding: 1rem;color: white">"
+                                        Support
+                                        Digital Transformation of T24 Core Banking Systems to meet customer
+                                        expectations. "
                                     </h5>
                                 </div>
-                                
+
 
                             </div>
                         </div>
@@ -628,8 +638,8 @@
     </div>
 
 
-   
-    <section id="sec-2" >
+
+    <section id="sec-2">
         <!-- <div class="row" >
             <div class="col" style="text-align: right;">
                 <img src="assets/about_us_1.png" alt="Your Image" id="images">
@@ -648,9 +658,10 @@
                 </div>
             </div>
         </div> -->
-        <div  class="row">
-            <h1 style="text-align: center;text-shadow: #553583;">Our Services</h1>
-            <hr>
+        <div class="row">
+            <h1 style="text-align: center; color: #553583; font-weight: 500; text-shadow: 0 0 5px rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.1);">Our Services</h1>
+
+            <hr class="hr-with-padding">
         </div>
 
 
@@ -663,17 +674,21 @@
                                 <img class="card-img-top" src="assets/aviation_icon.png" alt="Card image cap">
                                 <div class="card-body">
                                     <h4 class="card-title">Aviation Consultancy</h4>
-                                    <p class="card-text">For expert aviation guidance, trust our consultants. We offer tailored advice, industry insights, and IT solutions for aviation professionals and enthusiasts.</p>
+                                    <p class="card-text">For expert aviation guidance, trust our consultants. We offer
+                                        tailored advice, industry insights, and IT solutions for aviation professionals
+                                        and enthusiasts.</p>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <p>At Accelution (Private) Limited, we enhance civil aviation systems, ensure regulatory compliance, and provide tailored IT solutions.
+                                <p>At Accelution (Private) Limited, we enhance civil aviation systems, ensure regulatory
+                                    compliance, and provide tailored IT solutions.
                                     <br><br>
-                                    •   Civil Aviation Authorities<br>
-                                    •   Airlines<br>
-                                    •   Transport of Dangerous Goods by Air<br>
-                                    •   Designated Postal Operators<br>
-                                    •   Ground</p>
+                                    • Civil Aviation Authorities<br>
+                                    • Airlines<br>
+                                    • Transport of Dangerous Goods by Air<br>
+                                    • Designated Postal Operators<br>
+                                    • Ground
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -685,15 +700,20 @@
                                 <img class="card-img-top" src="assets/bank_icon.png" alt="Card image cap">
                                 <div class="card-body">
                                     <h4 class="card-title">T24 Core Banking Consultancy</h4>
-                                    <p class="card-text">Support Digital Transformation of T24 Core Banking Systems to meet customer expectations.</p>
+                                    <p class="card-text">Support Digital Transformation of T24 Core Banking Systems to
+                                        meet customer expectations.</p>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <p>Our consultants bring over 20 years of experience in Temenos Transact Core Banking implementation and support,
-                                     covering everything from requirement specification to development, deployment, and project management.
-                                     <br><br>
-                                    We have a proven track record in global data migration, having successfully 
-                                    completed numerous projects in Asia, Europe, and North America, including for Tier 1 clients.</p>
+                                <p>Our consultants bring over 20 years of experience in Temenos Transact Core Banking
+                                    implementation and support,
+                                    covering everything from requirement specification to development, deployment, and
+                                    project management.
+                                    <br><br>
+                                    We have a proven track record in global data migration, having successfully
+                                    completed numerous projects in Asia, Europe, and North America, including for Tier 1
+                                    clients.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -705,15 +725,22 @@
                                 <img class="card-img-top" src="assets/digital_icon.png" alt="Card image cap">
                                 <div class="card-body">
                                     <h4 class="card-title">Digital Transformation</h4>
-                                    <p class="card-text">We excel in innovative IT solutions for efficiency, security, and digital impact. Services include HR, Risk Management, Custom Solutions, and IT Services.</p>
+                                    <p class="card-text">We excel in innovative IT solutions for efficiency, security,
+                                        and digital impact. Services include HR, Risk Management, Custom Solutions, and
+                                        IT Services.</p>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <p>Digital transformation is more than adopting new tools—it's about reimagining processes, enhancing customer experiences, and future-proofing your business. We develop tailored strategies to meet your unique goals and challenges.<br>
+                                <p>Digital transformation is more than adopting new tools—it's about reimagining
+                                    processes, enhancing customer experiences, and future-proofing your business. We
+                                    develop tailored strategies to meet your unique goals and challenges.<br>
                                     <br>
-                                    From optimizing IT infrastructure to exploring AI, we're here to guide you. Our holistic approach ensures you stay ahead in your industry.<br>
+                                    From optimizing IT infrastructure to exploring AI, we're here to guide you. Our
+                                    holistic approach ensures you stay ahead in your industry.<br>
                                     <br>
-                                    Join us on this journey. Discover how Accelution can help your organization thrive in the digital age.</p>
+                                    Join us on this journey. Discover how Accelution can help your organization thrive
+                                    in the digital age.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -725,15 +752,21 @@
                                 <img class="card-img-top" src="assets/business_icon.png" alt="Card image cap">
                                 <div class="card-body">
                                     <h4 class="card-title">IT and Business Consultancy</h4>
-                                    <p class="card-text">We analyze and improve business strategy, operations, tech, change management, and coaching skills. Our expertise extends to IT, business consultancy, and process automation.</p>
+                                    <p class="card-text">We analyze and improve business strategy, operations, tech,
+                                        change management, and coaching skills. Our expertise extends to IT, business
+                                        consultancy, and process automation.</p>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <p>We help organizations improve performance by analyzing business problems and developing improvement plans,
-                                     including strategic development, operational management, technology implementation, change management, and coaching skills.<br>
-                                     <br>
-                                    We apply project management processes—initiating, planning, executing, monitoring, controlling, and closing—using our knowledge, 
-                                    skills, tools, and techniques to meet project requirements.</p>
+                                <p>We help organizations improve performance by analyzing business problems and
+                                    developing improvement plans,
+                                    including strategic development, operational management, technology implementation,
+                                    change management, and coaching skills.<br>
+                                    <br>
+                                    We apply project management processes—initiating, planning, executing, monitoring,
+                                    controlling, and closing—using our knowledge,
+                                    skills, tools, and techniques to meet project requirements.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -745,7 +778,7 @@
     </section>
 
 
-   
+
     <section id="sec-3">
         <div class="row" id="aboutUs">
             <div class="col" style="padding: 20px;">
@@ -780,7 +813,7 @@
             <div class="container text-center text-md-start mt-5 position-relative" style="z-index: 1;">
                 <div class="row mt-2">
                     <img src="assets/webLogo.png" alt="Logo" class="coin-flip"
-                        style="height: 50%; width: 155px; margin-top: -11px;">
+                        style="height: 50%; width: 155px;margin-left: -80px;">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">
                             <img src="assets/orginalLogo2 (1).png" alt="Logo"
@@ -823,7 +856,7 @@
                 </div>
             </div>
         </section>
-        <div class="text-center p-4" style="background-color: #76668a; color: white;">
+        <div class="text-center p-4" style="background-color: #553583; color: white;">
             <a class="text-reset fw-bold" href="" style="text-decoration: none;">© 2024 Accelution (Private) Limited,
                 All Rights Reserved.</a>
         </div>
@@ -839,7 +872,7 @@
     <script>
 
 
-document.querySelectorAll('.cards').forEach(card => {
+        document.querySelectorAll('.cards').forEach(card => {
             card.addEventListener('click', () => {
                 card.querySelector('.card-inner').classList.toggle('card-flip');
             });
@@ -873,7 +906,7 @@ document.querySelectorAll('.cards').forEach(card => {
             }, 5000); // Adjust the delay before starting the animation (in milliseconds)
         });
 
-        
+
 
 
         document.addEventListener('DOMContentLoaded', function () {
