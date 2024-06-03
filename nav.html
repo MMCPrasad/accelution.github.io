@@ -38,10 +38,6 @@
         .coin-flip {
             display: inline-block;
             animation: flip 5s infinite ease-in-out;
-            /* height: 50%;
-  margin-left: 135px;
-  width: 235px;
-  margin-top: -11px; */
         }
 
         @keyframes flip {
@@ -57,59 +53,59 @@
                 transform: perspective(1000px) rotateY(360deg);
             }
         }
+
         /* Styles for mobile phones */
-@media (max-width: 576px) {
-    .navbar-brand {
-        margin-left: 0.5rem; /* Adjust spacing for the logo */
-    }
+        @media (max-width: 576px) {
+            .navbar-brand {
+                margin-left: 0.5rem;
+            }
 
-    .navbar-nav {
-        margin-top: 1rem; /* Add margin to separate links from the brand */
-    }
+            .navbar-nav {
+                margin-top: 1rem;
+            }
 
-    .nav-item {
-        margin-right: 0.5rem; /* Adjust spacing between nav items */
-    }
+            .nav-item {
+                margin-right: 0.5rem;
+            }
 
-    .coin-flip {
-        display: none; /* Hide the coin-flip image on mobile phones */
-    }
+            .coin-flip {
+                display: none;
+            }
 
-    .navbar-collapse {
-        padding-right: 0; /* Remove padding on the right side */
-    }
-}
+            .navbar-collapse {
+                padding-right: 0;
+            }
+        }
 
-/* Styles for tablets */
-@media (min-width: 576px) and (max-width: 992px) {
-    .navbar-brand {
-        margin-left: 1rem; /* Adjust spacing for the logo */
-    }
+        /* Styles for tablets */
+        @media (min-width: 576px) and (max-width: 992px) {
+            .navbar-brand {
+                margin-left: 1rem;
+            }
 
-    .nav-item {
-        margin-right: 1rem; /* Adjust spacing between nav items */
-    }
-}
+            .nav-item {
+                margin-right: 1rem;
+            }
+        }
 
-/* Styles for desktops */
-@media (min-width: 992px) {
-    .navbar-brand {
-        margin-left: 7rem; /* Restore original margin for the logo */
-    }
+        /* Styles for desktops */
+        @media (min-width: 992px) {
+            .navbar-brand {
+                margin-left: 7rem;
+            }
 
-    .navbar-nav {
-        margin-right: 10rem; /* Adjust spacing for the right side */
-    }
+            .navbar-nav {
+                margin-right: 10rem;
+            }
 
-    .nav-item {
-        margin-right: 2rem; /* Adjust spacing between nav items */
-    }
+            .nav-item {
+                margin-right: 2rem;
+            }
 
-    .coin-flip {
-        margin-left: 2rem; /* Adjust spacing for the coin-flip image */
-    }
-}
-
+            .coin-flip {
+                margin-left: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -117,37 +113,29 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky">
         <div class="container-fluid">
             <a class="navbar-brand" style="margin-top: 1rem; margin-left: 7rem;">
-                <img src="assets/orginalLogo.png" width="190" height="60" class="d-inline-block align-top" alt="">
+                <img src="assets/webLogo.png" class="coin-flip" alt="Right Corner Image" width="50" height="50">
+                <img src="assets/orginalLogo - Copy.png" width="190" height="60" class="d-inline-block align-top" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-right: 10rem;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-nav ms-auto">
-                    <div class="nav-item" style="margin-right: 2rem;">
+                    <div class="nav-item">
                         <a class="nav-link" href="#" onclick="sendMessage('sec-2')">Services</a>
                     </div>
-                    <div class="nav-item" style="margin-right: 2rem;">
+                    <div class="nav-item">
                         <a class="nav-link" href="#" onclick="sendMessage('aboutUs')">About Us</a>
                     </div>
-                    <!-- <div class="nav-item" style="margin-right: 2rem;">
-                        <a class="nav-link" href="#" onclick="sendMessage('footer')">Team</a>
-                    </div> -->
-                    <div class="nav-item" style="margin-right: 2rem;">
+                    <div class="nav-item">
                         <button class="btn btn-danger" onclick="sendMessage('footer')"
                             onmouseover="this.style.transition='transform 0.5s ease'; this.style.transform='translateY(-5px)'"
                             onmouseout="this.style.transition='transform 0.5s ease'; this.style.transform='none'">Talk
                             To Us</button>
                     </div>
-
                 </div>
-            </div>
-            <div class="nav-item" style="margin-right: 2rem;">
-                <a href="#">
-                    <img src="assets/webLogo.png" class="coin-flip" alt="Right Corner Image" width="50" height="50">
-                </a>
             </div>
         </div>
     </nav>
@@ -156,11 +144,8 @@
         function sendMessage(sectionId) {
             window.parent.postMessage(sectionId, window.location.origin);
         }
-
-        function openContactForm() {
-
-        }
     </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Jm4Ubi1Q1K5oIc7KI4oW9Adp4R4p" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
