@@ -26,7 +26,7 @@
 .card-inner {
     position: relative;
     width: 100%;
-    height: 30rem;
+    height: 32rem;
     transform-style: preserve-3d;
     transition: transform 1.2s;
 }
@@ -50,7 +50,7 @@
     transform: rotateY(180deg);
     padding-left: 2rem;
     padding-right: 2rem;
-    background-color: #9fb9e3;
+    background: linear-gradient(to bottom, #35155D, #6B4D9A);
     border-radius: 20px;
     font-weight: 500;
 
