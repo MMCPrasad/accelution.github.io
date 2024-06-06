@@ -40,6 +40,7 @@
     margin-bottom: 2rem;
     perspective: 1000px; /* Perspective for 3D effect */
     cursor: pointer;
+    padding: 1rem;
 }
 
 
