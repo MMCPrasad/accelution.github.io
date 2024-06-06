@@ -50,6 +50,7 @@
     height: 32rem;
     transform-style: preserve-3d;
     transition: transform 1.2s;
+    
 }
 
 .card-front, .card-back {
@@ -57,12 +58,13 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    padding: 1rem;
+    
 }
 
 .card-front {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .card-back {
