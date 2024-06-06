@@ -543,11 +543,14 @@
 
         .hr-with-padding {
             border: 0;
-            border-bottom: 1px solid #35155D;
-            width: 60%;
+            border-bottom: 2px solid #000000;
+            width: 80%;
             /* Adjust width as needed */
             margin: 0 auto;
             /* Center the HR line */
+        }
+        a[title="For evaluation use only."] {
+            display: none !important;
         }
     </style>
 </head>
@@ -711,7 +714,8 @@
                                 </div>
                             </div>
                             <div class="card-back">
-                                <p style="color: white;">At Accelution (Private) Limited, we enhance civil aviation systems, ensure regulatory
+                                <p ><strong>Aviation Consultancy</strong> <br>   <br>
+                                    At Accelution (Private) Limited, we enhance civil aviation systems, ensure regulatory
                                     compliance, and provide tailored IT solutions.
                                     <br><br>
                                     • Civil Aviation Authorities<br>
@@ -720,7 +724,10 @@
                                     • Designated Postal Operators<br>
                                     • Ground
                                 </p>
+                                
                             </div>
+                            <div class="card-image-overlay"></div>
+
                         </div>
                     </div>
                 </div>
@@ -736,7 +743,8 @@
                                 </div>
                             </div>
                             <div class="card-back">
-                                <p style="color: white;">Our consultants bring over 20 years of experience in Temenos Transact Core Banking
+                                <p ><strong>T24 Core Banking Consultancy</strong> <br>   <br>
+                                    Our consultants bring over 20 years of experience in Temenos Transact Core Banking
                                     implementation and support,
                                     covering everything from requirement specification to development, deployment, and
                                     project management.
@@ -746,6 +754,7 @@
                                     clients.
                                 </p>
                             </div>
+                            <div class="card-image-overlay"></div>
                         </div>
                     </div>
                 </div>
@@ -762,17 +771,17 @@
                                 </div>
                             </div>
                             <div class="card-back">
-                                <p style="color: white;">Digital transformation is more than adopting new tools—it's about reimagining
+                                <p ><strong>Digital Transformation</strong> <br>   <br>
+                                    Digital transformation is more than adopting new tools—it's about reimagining
                                     processes, enhancing customer experiences, and future-proofing your business. We
                                     develop tailored strategies to meet your unique goals and challenges.<br>
                                     <br>
                                     From optimizing IT infrastructure to exploring AI, we're here to guide you. Our
-                                    holistic approach ensures you stay ahead in your industry.<br>
-                                    <br>
-                                    Join us on this journey. Discover how Accelution can help your organization thrive
-                                    in the digital age.
+                                    holistic approach ensures you stay ahead in your industry.
                                 </p>
                             </div>
+                            <div class="card-image-overlay"></div>
+
                         </div>
                     </div>
                 </div>
@@ -789,7 +798,8 @@
                                 </div>
                             </div>
                             <div class="card-back">
-                                <p style="color: white;">We help organizations improve performance by analyzing business problems and
+                                <p ><strong>IT and Business Consultancy</strong> <br>   <br>
+                                    We help organizations improve performance by analyzing business problems and
                                     developing improvement plans,
                                     including strategic development, operational management, technology implementation,
                                     change management, and coaching skills.<br>
@@ -799,6 +809,8 @@
                                     skills, tools, and techniques to meet project requirements.
                                 </p>
                             </div>
+                            <div class="card-image-overlay"></div>
+
                         </div>
                     </div>
                 </div>
@@ -835,7 +847,26 @@
                 <img src="assets/about_us_2.png" class="img-fluid">
             </div>
         </div>
+        <div class="row" id="aboutUs">
+            <div class="col" style="padding: 20px;">
+                <img src="assets/about_us_.png" class="img-fluids">
+            </div>
+            <div class="col" style="padding: 20px;">
+                
+                    
+                    <div class="text" style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem;">
+                        Our Approach is to consistently develop forward-thinking, inventive products and solutions 
+                        that anticipate industry trends, solve complex challenges and propel our customers toward the 
+                        forefront of technological advancement by standing as a bridge, fostering meaningful connections 
+                        between people, businesses and technologies. Through pioneering technologies and forward-thinking strategies, 
+                        we aspire to inspire a new generation of thinkers, innovators and leaders, who will shape the future of Sri Lanka's IT landscape.
+                    </div><br>
+                </div>
+            </div>
+            
+        </div>
     </section>
+    <!-- <div id="map" style="align-items: center;"></div> -->
     <!-- <section id="sec-4">
 
         <div class="contact1">
@@ -883,8 +914,8 @@
         </div>
 
 
-    </section> -->
-    
+    </section>
+     -->
     <footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer" style="padding-top: 1rem;">
         <section class="p-4 position-relative" style="color: white;">
             <div class="background-overlay"></div>
@@ -940,7 +971,8 @@
                 All Rights Reserved.</a>
         </div>
     </footer>
-
+    <script type="text/javascript" src="map/mapdata.js"></script>		
+    <script  type="text/javascript" src="map/worldmap.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
@@ -949,6 +981,18 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script>
+// Add click event listeners to each card
+document.querySelectorAll('.card-inner').forEach(card => {
+    card.addEventListener('click', function() {
+        this.classList.toggle('flip'); // Toggle flip class on click
+        const imageOverlay = this.querySelector('.card-image-overlay');
+        if (imageOverlay.style.backgroundImage === '') {
+            // If image overlay is not set, set it with the corresponding card image
+            const cardImgSrc = this.querySelector('.card-img-top').getAttribute('src');
+            imageOverlay.style.backgroundImage = `url(${cardImgSrc})`;
+        }
+    });
+});
 
 
         document.querySelectorAll('.cards').forEach(card => {
@@ -978,11 +1022,11 @@
                     elements[index].classList.add('active');
                     setTimeout(function () {
                         fadeInSequentially(elements, index + 1);
-                    }, 300); // Adjust the delay between fade-ins
+                    }, 300);
                 }
 
                 fadeInSequentially(elements, 0);
-            }, 5000); // Adjust the delay before starting the animation (in milliseconds)
+            }, 5000); 
         });
 
 

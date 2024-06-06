@@ -7,7 +7,26 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
 }
+/* Add styles for the image overlay */
+.card-image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 60%; /* Adjust the size of the image */
+    height: 60%;
+    background-size: contain;
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-position: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
 
+
+
+.card-inner.flip .card-image-overlay {
+    opacity: 0.2; /* Show when card is flipped */
+}
 /* Cards styling */
 .cards-container {
     margin-top: 3rem;
@@ -22,6 +41,7 @@
     perspective: 1000px; /* Perspective for 3D effect */
     cursor: pointer;
 }
+
 
 .card-inner {
     position: relative;
@@ -50,7 +70,7 @@
     transform: rotateY(180deg);
     padding-left: 2rem;
     padding-right: 2rem;
-    background: linear-gradient(to bottom, #35155D, #6B4D9A);
+    background: white;
     border-radius: 20px;
     font-weight: 500;
 
@@ -345,4 +365,10 @@
 .img-fluid {
     max-width: 100%;
     height: auto;
+}
+.img-fluids {
+    max-width: 50%; /* Adjust this value as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally if needed */
 }
