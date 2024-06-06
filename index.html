@@ -552,6 +552,51 @@
         a[title="For evaluation use only."] {
             display: none !important;
         }
+        
+
+
+
+      :root {
+        --primary: #FF0000;
+        --primary-rgb: 255, 0, 0; /* Define RGB format for use in rgba() */
+      }
+
+      .map-container {
+        padding: 1.2rem 0.8rem;
+        position: relative;
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .map-container img {
+        width: 70%;
+      }
+      .point {
+        cursor: pointer;
+        position: absolute;
+        width: 0.4rem;
+        height: 0.4rem;
+        background-color: var(--primary);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        will-change: transform, box-shadow;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 rgba(var(--primary-rgb), 0.4);
+        animation: pulse 3s infinite;
+      }
+      .point:hover {
+        animation: none;
+        transform: translate(-50%, -50%) scale3D(2.35, 2.35, 2);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+      .canada { top: 27%; left: 22%; }
+      .kadawatha { top: 52.5%; left: 64%; }
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.5); }
+        70% { box-shadow: 0 0 0 25px rgba(var(--primary-rgb), 0); }
+        100% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0); }
+      }
     </style>
 </head>
 
@@ -916,7 +961,21 @@
 
     </section>
      -->
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer" style="padding-top: 1rem;">
+    
+    
+     <div class="container">
+        <h1
+                style="text-align: center; color: #553583; font-weight: 500; text-shadow: 0 0 5px rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.1);">
+                Our Precense</h1>
+                <hr class="hr-with-padding">
+        <div class="map-container">
+          <img src="http://res.cloudinary.com/slzr/image/upload/v1500321012/world-map-1500_vvekl5.png" alt="World Map">
+          <div class="point canada tippy" title="Delta, BC"></div>
+          <div class="point kadawatha tippy" title="Mahara, Kadawatha"></div>
+        </div>
+        </div>
+        
+     <footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer" style="padding-top: 1rem;">
         <section class="p-4 position-relative" style="color: white;">
             <div class="background-overlay"></div>
             <div class="container text-center text-md-start mt-5 position-relative" style="z-index: 1;">
@@ -981,6 +1040,17 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script>
+$(document).ready(function(){
+        tippy('.tippy', {
+          theme: 'light',
+          size: 'big',
+          arrow: true
+        });
+      });
+
+
+
+
 // Add click event listeners to each card
 document.querySelectorAll('.card-inner').forEach(card => {
     card.addEventListener('click', function() {

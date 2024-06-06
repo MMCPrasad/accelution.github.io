@@ -1,14 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    <style>
       
-      </head>
-      
-      <body>
-        <div id="map"></div>
-        <script type="text/javascript" src="map/mapdata.js"></script>		
-<script  type="text/javascript" src="map/worldmap.js"></script>
-      </body>
+      body {
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      :root {
+        --primary: #FF0000;
+        --primary-rgb: 255, 0, 0; /* Define RGB format for use in rgba() */
+      }
+
+      .map-container {
+        padding: 3.2rem 0.8rem;
+        position: relative;
+        display: inline-block;
+      }
+      .map-container img {
+        width: 60%;
+      }
+      .point {
+        cursor: pointer;
+        position: absolute;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: var(--primary);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        will-change: transform, box-shadow;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 rgba(var(--primary-rgb), 0.4);
+        animation: pulse 3s infinite;
+      }
+      .point:hover {
+        animation: none;
+        transform: translate(-50%, -50%) scale3D(1.35, 1.35, 1);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+      .japon { top: 26%; left: 7%; }
+      .australia { top: 52.5%; left: 42.5%; }
+
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.5); }
+        70% { box-shadow: 0 0 0 25px rgba(var(--primary-rgb), 0); }
+        100% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0); }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="map-container">
+        <img src="http://res.cloudinary.com/slzr/image/upload/v1500321012/world-map-1500_vvekl5.png" alt="World Map">
+        <div class="point japon tippy" title="Delta, BC"></div>
+        <div class="point australia tippy" title="Mahara, Kadawatha"></div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        tippy('.tippy', {
+          theme: 'light',
+          size: 'big',
+          arrow: true
+        });
+      });
+    </script>
+  </body>
 </html>
