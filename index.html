@@ -60,11 +60,7 @@
             /* Adjust as needed */
         }
 
-        #sec-carousel .carousel-inner .carousel-item img {
-            max-height: 500px;
-            width: 100%;
-            margin: auto;
-        }
+
 
         /* CSS to fix the position of the iframe to the top */
         iframe {
@@ -422,7 +418,6 @@
         }
 
         .cards {
-            width: 18rem;
             margin: 1rem;
             /* Add some margin between cards */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -549,54 +544,76 @@
             margin: 0 auto;
             /* Center the HR line */
         }
+
         a[title="For evaluation use only."] {
             display: none !important;
         }
-        
 
 
 
-      :root {
-        --primary: #FF0000;
-        --primary-rgb: 255, 0, 0; /* Define RGB format for use in rgba() */
-      }
 
-      .map-container {
-        padding: 1.2rem 0.8rem;
-        position: relative;
-        display: inline-block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .map-container img {
-        width: 70%;
-      }
-      .point {
-        cursor: pointer;
-        position: absolute;
-        width: 0.4rem;
-        height: 0.4rem;
-        background-color: var(--primary);
-        border-radius: 50%;
-        transition: all 0.3s ease;
-        will-change: transform, box-shadow;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 0 0 rgba(var(--primary-rgb), 0.4);
-        animation: pulse 3s infinite;
-      }
-      .point:hover {
-        animation: none;
-        transform: translate(-50%, -50%) scale3D(2.35, 2.35, 2);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      }
-      .canada { top: 27%; left: 22%; }
-      .kadawatha { top: 52.5%; left: 64%; }
-      @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.5); }
-        70% { box-shadow: 0 0 0 25px rgba(var(--primary-rgb), 0); }
-        100% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0); }
-      }
+        :root {
+            --primary: #FF0000;
+            --primary-rgb: 255, 0, 0;
+            /* Define RGB format for use in rgba() */
+        }
+
+        .map-container {
+            padding: 1.2rem 0.8rem;
+            position: relative;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-container img {
+            width: 70%;
+        }
+
+        .point {
+            cursor: pointer;
+            position: absolute;
+            width: 0.4rem;
+            height: 0.4rem;
+            background-color: var(--primary);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            will-change: transform, box-shadow;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 rgba(var(--primary-rgb), 0.4);
+            animation: pulse 3s infinite;
+        }
+
+        .point:hover {
+            animation: none;
+            transform: translate(-50%, -50%) scale3D(2.35, 2.35, 2);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .canada {
+            top: 27%;
+            left: 22%;
+        }
+
+        .kadawatha {
+            top: 52.5%;
+            left: 64%;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 25px rgba(var(--primary-rgb), 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0);
+            }
+        }
     </style>
 </head>
 
@@ -606,112 +623,106 @@
 
 
 
-    <div class="header" style="margin-top: -3.2rem;margin-bottom: 1rem;">
-
-        <!--Content before waves-->
-        <div class="inner-header flex">
-            <!--Just the logo.. Don't mind this-->
-            <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
-                <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
-                <g>
-                </g>
-            </svg>
-            <section id="sec-carousel" style="padding: 0;">
-                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <img src="assets/avation.png" alt="aviation">
+    <section id="sec-carousel" style="padding: 0;">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-color: #35155D;">
+                    <div class="row" style=" margin-top: 2rem;">
+                        <div class="col">
+                            <img src="assets/avation.png" alt="aviation">
+                        </div>
+                        <div class="col">
+                            <h1 style="font-family: 'Merriweather', serif;color: rgb(255, 255, 255);">Aviation
+                                Consultancy</h1>
+                            <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
+                                <h5 style="font-family: 'Quicksand', sans-serif;color: white;">"
+                                    Relentlessly pursuing excellence to
+                                    strengthen aviation systems,
+                                    mitigate risks, and unlock the full potential of your aviation business. "</h5>
                             </div>
-                            <div class="row">
-                                <h1 style="font-family: 'Merriweather', serif;color: rgb(255, 255, 255);">Aviation
-                                    Consultancy</h1>
-                                <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
-                                    <h5 style="font-family: 'Quicksand', sans-serif;color: white;">"
-                                        Relentlessly pursuing excellence to
-                                        strengthen aviation systems,
-                                        mitigate risks, and unlock the full potential of your aviation business. "</h5>
-                                </div>
 
-
-                            </div>
 
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <img src="assets/IT.png" alt="aviation">
-                            </div>
-                            <div class="row">
-                                <h1 style="font-family: 'Merriweather', serif;color: white;">IT and Business
-                                    Consultancy
-                                </h1>
-                                <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
-                                    <h5 style="font-family: 'Quicksand', sans-serif;color: white;">
-                                        "Dedicated to
-                                        providing competitive business
-                                        solutions to empower your business strategies through exceptional professional
-                                        expertise, providing quality services with continuous engagements."</h5>
-                                </div>
+                    </div>
 
 
-                            </div>
-
+                </div>
+                <div class="carousel-item" style="background-color: #35155D;">
+                    <div class="row">
+                        <div class="col">
+                            <img src="assets/IT.png" alt="aviation">
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <img src="assets/post.png" alt="aviation">
-                            </div>
-                            <div class="row">
-                                <h1 style="font-family: 'Merriweather', serif;color: white;">Digital Transformation
-                                </h1>
-                                <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
-                                    <h5 style="font-family: 'Quicksand', sans-serif;color: white;">" Bring
-                                        innovative and bespoke IT solutions that exceed customer
-                                        expectations while upholding the values of trust, inspiration, and on-time
-                                        delivery
-                                        through
-                                        transformative technologies that inspire growth and drive success. "</h5>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <img src="assets/banking.png" alt="aviation">
-                            </div>
-                            <div class="row">
-                                <h1 style="font-family: 'Merriweather', serif;color: white;">T24 Core Banking
-                                    Consultancy
-                                </h1>
-                                <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
-                                    <h5 style="font-family: 'Quicksand', sans-serif;padding: 1rem;color: white">"
-                                        Support
-                                        Digital Transformation of T24 Core Banking Systems to meet customer
-                                        expectations. "
-                                    </h5>
-                                </div>
-
-
+                        <div class="col">
+                            <h1 style="font-family: 'Merriweather', serif;color: white;">IT and Business
+                                Consultancy
+                            </h1>
+                            <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
+                                <h5 style="font-family: 'Quicksand', sans-serif;color: white;">
+                                    "Dedicated to
+                                    providing competitive business
+                                    solutions to empower your business strategies through exceptional professional
+                                    expertise, providing quality services with continuous engagements."</h5>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+
+
                 </div>
-            </section>
+                <div class="carousel-item" style="background-color: #35155D;">
+                    <div class="row">
+                        <div class="col">
+                            <img src="assets/post.png" alt="aviation">
+                        </div>
+                        <div class="col">
+                            <h1 style="font-family: 'Merriweather', serif;color: white;">Digital Transformation
+                            </h1>
+                            <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
+                                <h5 style="font-family: 'Quicksand', sans-serif;color: white;">" Bring
+                                    innovative and bespoke IT solutions that exceed customer
+                                    expectations while upholding the values of trust, inspiration, and on-time
+                                    delivery
+                                    through
+                                    transformative technologies that inspire growth and drive success. "</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item" style="background-color: #35155D;">
+                    <div class="row">
+                        <div class="col">
+                            <img src="assets/banking.png" alt="aviation">
+                        </div>
+                        <div class="col">
+                            <h1 style="font-family: 'Merriweather', serif;color: white;">T24 Core Banking
+                                Consultancy
+                            </h1>
+                            <div class="caption" style="width: 80%; margin: 0 auto; text-align: center;">
+                                <h5 style="font-family: 'Quicksand', sans-serif;padding: 1rem;color: white">"
+                                    Support
+                                    Digital Transformation of T24 Core Banking Systems to meet customer
+                                    expectations. "
+                                </h5>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-
-
+    </section>
     </div>
 
 
@@ -735,7 +746,7 @@
                 </div>
             </div>
         </div> -->
-        <div class="row">
+        <div class="row" style="margin-top: 2rem;">
             <h1
                 style="text-align: center; color: #553583; font-weight: 500; text-shadow: 0 0 5px rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.1);">
                 Our Services</h1>
@@ -749,18 +760,25 @@
                 <div class="col">
                     <div class="cards">
                         <div class="card-inner">
-                            <div class="card-front">
-                                <img class="card-img-top" src="assets/aviation_icon.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Aviation Consultancy</h4>
-                                    <p class="card-text">For expert aviation guidance, trust our consultants. We offer
-                                        tailored advice, industry insights, and IT solutions for aviation professionals
-                                        and enthusiasts.</p>
+                            <div class="row">
+                                <div class="col-3">
+                                    <img class="card-img-top" src="assets/aviation_icon.png" alt="Card image cap">
                                 </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Aviation Consultancy</h4>
+                                        <p class="card-text">For expert aviation guidance, trust our consultants. We
+                                            offer
+                                            tailored advice, industry insights, and IT solutions for aviation
+                                            professionals
+                                            and enthusiasts.</p>
+                                    </div>
+                                </div><hr class="hr-with-padding">
                             </div>
-                            <div class="card-back">
-                                <p ><strong>Aviation Consultancy</strong> <br>   <br>
-                                    At Accelution (Private) Limited, we enhance civil aviation systems, ensure regulatory
+                            <div class="row" style="padding-left: 2rem;">
+                                <p><br>
+                                    At Accelution (Private) Limited, we enhance civil aviation systems, ensure
+                                    regulatory
                                     compliance, and provide tailored IT solutions.
                                     <br><br>
                                     • Civil Aviation Authorities<br>
@@ -769,26 +787,27 @@
                                     • Designated Postal Operators<br>
                                     • Ground
                                 </p>
-                                
                             </div>
-                            <div class="card-image-overlay"></div>
-
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="cards">
                         <div class="card-inner">
-                            <div class="card-front">
-                                <img class="card-img-top" src="assets/bank_icon.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">T24 Core Banking Consultancy</h4>
-                                    <p class="card-text">Support Digital Transformation of T24 Core Banking Systems to
-                                        meet customer expectations.</p>
+                            <div class="row">
+                                <div class="col-3">
+                                    <img class="card-img-top" src="assets/bank_icon.png" alt="Card image cap">
                                 </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h4 class="card-title">T24 Core Banking Consultancy</h4>
+                                        <p class="card-text">Support Digital Transformation of T24 Core Banking Systems to
+                                            meet customer expectations.</p>
+                                    </div>
+                                </div><hr class="hr-with-padding">
                             </div>
-                            <div class="card-back">
-                                <p ><strong>T24 Core Banking Consultancy</strong> <br>   <br>
+                            <div class="row" style="padding-left: 2rem;">
+                                <p> <br>
                                     Our consultants bring over 20 years of experience in Temenos Transact Core Banking
                                     implementation and support,
                                     covering everything from requirement specification to development, deployment, and
@@ -799,24 +818,36 @@
                                     clients.
                                 </p>
                             </div>
-                            <div class="card-image-overlay"></div>
                         </div>
                     </div>
+                    
                 </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="cards-container">
+            <div class="row">
                 <div class="col">
                     <div class="cards">
                         <div class="card-inner">
-                            <div class="card-front">
-                                <img class="card-img-top" src="assets/digital_icon.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Digital Transformation</h4>
-                                    <p class="card-text">We excel in innovative IT solutions for efficiency, security,
-                                        and digital impact. Services include HR, Risk Management, Custom Solutions, and
-                                        IT Services.</p>
+                            <div class="row">
+                                <div class="col-3">
+                                    <img class="card-img-top" src="assets/digital_icon.png" alt="Card image cap">
                                 </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Digital Transformation</h4>
+                                        <p class="card-text">We excel in innovative IT solutions for efficiency, security,
+                                            and digital impact. Services include HR, Risk Management, Custom Solutions, and
+                                            IT Services.</p>
+                                    </div>
+                                </div><hr class="hr-with-padding">
                             </div>
-                            <div class="card-back">
-                                <p ><strong>Digital Transformation</strong> <br>   <br>
+                            <div class="row" style="padding-left: 2rem;">
+                                <p><br>
                                     Digital transformation is more than adopting new tools—it's about reimagining
                                     processes, enhancing customer experiences, and future-proofing your business. We
                                     develop tailored strategies to meet your unique goals and challenges.<br>
@@ -825,25 +856,27 @@
                                     holistic approach ensures you stay ahead in your industry.
                                 </p>
                             </div>
-                            <div class="card-image-overlay"></div>
-
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="cards">
                         <div class="card-inner">
-                            <div class="card-front">
-                                <img class="card-img-top" src="assets/business_icon.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">IT and Business Consultancy</h4>
-                                    <p class="card-text">We analyze and improve business strategy, operations, tech,
-                                        change management, and coaching skills. Our expertise extends to IT, business
-                                        consultancy, and process automation.</p>
+                            <div class="row">
+                                <div class="col-3">
+                                    <img class="card-img-top" src="assets/business_icon.png" alt="Card image cap">
                                 </div>
+                                <div class="col-9">
+                                    <div class="card-body">
+                                        <h4 class="card-title">IT and Business Consultancy</h4>
+                                        <p class="card-text">We analyze and improve business strategy, operations, tech,
+                                            change management, and coaching skills. Our expertise extends to IT, business
+                                            consultancy, and process automation.</p>
+                                    </div>
+                                </div><hr class="hr-with-padding">
                             </div>
-                            <div class="card-back">
-                                <p ><strong>IT and Business Consultancy</strong> <br>   <br>
+                            <div class="row" style="padding-left: 2rem;">
+                                <p><br>
                                     We help organizations improve performance by analyzing business problems and
                                     developing improvement plans,
                                     including strategic development, operational management, technology implementation,
@@ -854,14 +887,14 @@
                                     skills, tools, and techniques to meet project requirements.
                                 </p>
                             </div>
-                            <div class="card-image-overlay"></div>
-
                         </div>
                     </div>
+                    
                 </div>
             </div>
-        </div>
 
+        </div>
+       
 
     </section>
 
@@ -897,18 +930,20 @@
                 <img src="assets/about_us_.png" class="img-fluids">
             </div>
             <div class="col" style="padding: 20px;">
-                
-                    
-                    <div class="text" style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem;">
-                        Our Approach is to consistently develop forward-thinking, inventive products and solutions 
-                        that anticipate industry trends, solve complex challenges and propel our customers toward the 
-                        forefront of technological advancement by standing as a bridge, fostering meaningful connections 
-                        between people, businesses and technologies. Through pioneering technologies and forward-thinking strategies, 
-                        we aspire to inspire a new generation of thinkers, innovators and leaders, who will shape the future of Sri Lanka's IT landscape.
-                    </div><br>
-                </div>
+
+
+                <div class="text" style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem;">
+                    Our Approach is to consistently develop forward-thinking, inventive products and solutions
+                    that anticipate industry trends, solve complex challenges and propel our customers toward the
+                    forefront of technological advancement by standing as a bridge, fostering meaningful connections
+                    between people, businesses and technologies. Through pioneering technologies and forward-thinking
+                    strategies,
+                    we aspire to inspire a new generation of thinkers, innovators and leaders, who will shape the future
+                    of Sri Lanka's IT landscape.
+                </div><br>
             </div>
-            
+        </div>
+
         </div>
     </section>
     <!-- <div id="map" style="align-items: center;"></div> -->
@@ -961,21 +996,22 @@
 
     </section>
      -->
-    
-    
-     <div class="container">
+
+
+    <div class="container">
         <h1
-                style="text-align: center; color: #553583; font-weight: 500; text-shadow: 0 0 5px rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.1);">
-                Our Precense</h1>
-                <hr class="hr-with-padding">
+            style="text-align: center; color: #553583; font-weight: 500; text-shadow: 0 0 5px rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0,0.1), 0 0 15px rgba(0,0,0,0.1);">
+            Our Precense</h1>
+        <hr class="hr-with-padding">
         <div class="map-container">
-          <img src="http://res.cloudinary.com/slzr/image/upload/v1500321012/world-map-1500_vvekl5.png" alt="World Map">
-          <div class="point canada tippy" title="Delta, BC"></div>
-          <div class="point kadawatha tippy" title="Mahara, Kadawatha"></div>
+            <img src="http://res.cloudinary.com/slzr/image/upload/v1500321012/world-map-1500_vvekl5.png"
+                alt="World Map">
+            <div class="point canada tippy" title="Delta, BC"></div>
+            <div class="point kadawatha tippy" title="Mahara, Kadawatha"></div>
         </div>
-        </div>
-        
-     <footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer" style="padding-top: 1rem;">
+    </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer" style="padding-top: 1rem;">
         <section class="p-4 position-relative" style="color: white;">
             <div class="background-overlay"></div>
             <div class="container text-center text-md-start mt-5 position-relative" style="z-index: 1;">
@@ -1030,8 +1066,8 @@
                 All Rights Reserved.</a>
         </div>
     </footer>
-    <script type="text/javascript" src="map/mapdata.js"></script>		
-    <script  type="text/javascript" src="map/worldmap.js"></script>
+    <script type="text/javascript" src="map/mapdata.js"></script>
+    <script type="text/javascript" src="map/worldmap.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
@@ -1042,36 +1078,6 @@
     <script>
 
 
-
-
-// Add click event listeners to each card
-document.querySelectorAll('.card-inner').forEach(card => {
-    card.addEventListener('click', function() {
-        this.classList.toggle('flip'); // Toggle flip class on click
-        const imageOverlay = this.querySelector('.card-image-overlay');
-        if (imageOverlay.style.backgroundImage === '') {
-            // If image overlay is not set, set it with the corresponding card image
-            const cardImgSrc = this.querySelector('.card-img-top').getAttribute('src');
-            imageOverlay.style.backgroundImage = `url(${cardImgSrc})`;
-        }
-    });
-});
-
-
-        document.querySelectorAll('.cards').forEach(card => {
-            card.addEventListener('click', () => {
-                card.querySelector('.card-inner').classList.toggle('card-flip');
-            });
-        });
-        window.addEventListener('message', function (event) {
-            if (event.origin === window.location.origin) {
-                const sectionId = event.data;
-                const element = document.getElementById(sectionId);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
 
 
 
@@ -1089,7 +1095,7 @@ document.querySelectorAll('.card-inner').forEach(card => {
                 }
 
                 fadeInSequentially(elements, 0);
-            }, 5000); 
+            }, 5000);
         });
 
 
